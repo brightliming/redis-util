@@ -51,7 +51,7 @@ public class ShardedRedis implements JedisInterface {
         poolConfig.setTestOnBorrow(testOnBorrow);
 
         // 取得redis的url
-        String redisUrls = properties.getProperty("redis.ShardedJedisPoolConfig.urls");
+        String redisUrls = properties.getProperty("redis.jedisPoolConfig.urls");
         if (redisUrls == null || redisUrls.trim().isEmpty()) {
             throw new IllegalStateException("the urls of redis is not configured");
         }
